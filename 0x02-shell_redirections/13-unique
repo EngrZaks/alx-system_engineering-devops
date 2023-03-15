@@ -1,2 +1,0 @@
-#!/bin/bash
-readarray words && for word in "${!freq[@]}"; do if (( $(grep -c "^$word$" <<< "${words[*]}") == 1 )); then echo "$word"; fi; done | sort
