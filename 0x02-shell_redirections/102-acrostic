@@ -1,0 +1,7 @@
+#!/bin/bash
+input_file=$1
+decoded_message=""
+while IFS= read -r line; do
+  decoded_message+=$(echo "$line" | cut -c1)
+done < "$input_file"
+echo "${decoded_message}"$'\n'
